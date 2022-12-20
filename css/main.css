@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} 
+
+:root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+}
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #193549;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 3.125em;
+    font-weight: 100;
+}
+
+.controls {
+    margin-bottom: 50px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+label {
+    padding: 10px;
+    color: white;
+}
+
+input {
+    width: 100px;
+
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+figure {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* margin: 0; */
+    width: 500px;
+}
+
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    max-width: 100%;  /* this is a general code to add so the img tag acts like a block element */
+}
+
+.hl {
+    color: var(--base);
+}
