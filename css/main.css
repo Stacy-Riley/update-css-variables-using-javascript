@@ -4,11 +4,27 @@
   box-sizing: border-box;
 } 
 
+/* Creating the variables and their properties: */
 :root {
     --base: #ffc600;
     --spacing: 10px;
     --blur: 10px;
 }
+
+/* Assigning the variables to the properties of the img element: */
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+
+/* Assigning the variable to the color property of the "JS" span element: */
+.hl {
+    color: var(--base);
+}
+
+
+/* General Styles */
 html {
     font-size: 16px;
 }
@@ -22,6 +38,15 @@ body {
     font-weight: 100;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 0;
+    font-size: 0.750em;
+}
+
 .controls {
     margin-bottom: 50px;
 }
@@ -31,6 +56,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
+    margin-bottom: 20px;
 }
 
 label {
@@ -40,31 +66,21 @@ label {
 
 input {
     width: 100px;
-
 }
 
 .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 }
 
 figure {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* margin: 0; */
     width: 500px;
+    margin: 20px;
 }
 
 img {
-    padding: var(--spacing);
-    background: var(--base);
-    filter: blur(var(--blur));
-    max-width: 100%;  /* this is a general code to add so the img tag acts like a block element */
+    max-width: 100%; 
 }
 
-.hl {
-    color: var(--base);
-}
